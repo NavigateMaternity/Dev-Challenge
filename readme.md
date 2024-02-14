@@ -49,10 +49,8 @@ Getting the code and completing your challenge
 
 1) Since this is a [git template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template), it isn't possible to fork it, so you will need to "[Use template](https://docs.github.com/assets/cb-77734/mw-1440/images/help/repository/use-this-template-button.webp)" and clone it to your local development environment. Then, create a private github repository of your own and change that to be the upstream of your local copy. Once you are ready for us to see your code, add these users as collaborators to your project:
 
-* https://github.com/tslabach
-* https://github.com/lpeckham1
-* https://github.com/dcornewell
-* https://github.com/ariserac
+* https://github.com/cwolfgang-eig
+* https://github.com/tjamesNM
 * https://github.com/horner
 
 2) update the README in your repository with some screenshots and a link to a YouTube short/video demonstrating your solution 
