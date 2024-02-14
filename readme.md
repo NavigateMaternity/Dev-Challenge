@@ -62,19 +62,19 @@ Docker Notes if you'd like to implement a docker container for the database
 ============
 To start the database as a docker service:
 ```
-docker run --name=miedb -d -p 3307:3306 -e MARIADB_USER=app -e MARIADB_PASSWORD=wonderful -e MARIADB_DATABASE=miechallenge -e MARIADB_ROOT_PASSWORD=wonderful mariadb:latest
+docker run --name=nmdb -d -p 3307:3306 -e MARIADB_USER=app -e MARIADB_PASSWORD=wonderful -e MARIADB_DATABASE=challenge -e MARIADB_ROOT_PASSWORD=wonderful mariadb:latest
 ```
-NOTE!!!, do not leave the docker running when done testing.  Do a `docker kill miedb` to kill it when done BUT the data in the database will BE GONE!  You can restart it by doing `docker restart miedb` but you should consider doing a `docker rm miedb` to cleanup.
+NOTE!!!, do not leave the docker running when done testing.  Do a `docker kill nmdb` to kill it when done BUT the data in the database will BE GONE!  You can restart it by doing `docker restart nmdb` but you should consider doing a `docker rm nmdb` to cleanup.
 
 You can connect to it from the host machine using:
-`mysql --host=localhost -P 3307 --user=app --password=wonderful miechallenge`
+`mysql --host=localhost -P 3307 --user=app --password=wonderful challenge`
 or from docker by doing:
-`docker exec -it miedb mysql --host=localhost -P 3306 --user=app --password=wonderful miechallenge`
+`docker exec -it nmdb mysql --host=localhost -P 3306 --user=app --password=wonderful challenge`
 
 Bonus points if you can make a fully automated Dockerfile container for building and testing the app with a GitHub Action.
 
 
-How MIE will test your code (change this if needed)
+How we will test your code (change this if needed)
 =====
 
 * Reviewer will:
@@ -83,7 +83,7 @@ How MIE will test your code (change this if needed)
 
 # if the developer does not know about or is incapable of dockerizing mysql and loading the data...
 export APPLICANT_USER=''
-git clone git@github.mieweb.com:$APPLICANT_USER/mie-dev-challenge devchallenge_$APPLICANT_USER
+git clone github.com:$APPLICANT_USER/mie-dev-challenge devchallenge_$APPLICANT_USER
 mysql -e "CREATE DATABASE devchallenge_$APPLICANT_USER"
 mysql devchallenge_$APPLICANT_USER < schema.sql
 
